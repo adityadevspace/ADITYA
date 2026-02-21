@@ -11,10 +11,9 @@ const education = [
   },
   {
     name: "GEMS Polytechnic",
-    degree: "Diploma in Computer Science & Engineering",
+    degree: "Diploma in Computer Science & Engineering (7.23 CGPA)",
     duration: "2022 – 2025",
     location: "Aurangabad, Bihar, India",
-    location: "CGPA: 7.23",
     img: "/images/education/gems-polytechnic.png",
   },
 ];
@@ -152,4 +151,5 @@ export default function Education() {
   );
 
 }
+
 
