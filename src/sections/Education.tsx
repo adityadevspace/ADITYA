@@ -5,7 +5,7 @@ const education = [
   {
     name: "Graphic Era Hill University",
     degree: "B.Tech in Computer Science & Engineering",
-    duration: "2025 – 2029",
+    duration: "2024 – 2028",
     location: "Dehradun, Uttarakhand, India",
     img: "/images/education/graphic-era.png",
   },
@@ -149,4 +149,5 @@ export default function Education() {
       </div>
     </section>
   );
+
 }
