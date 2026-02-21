@@ -14,6 +14,7 @@ const education = [
     degree: "Diploma in Computer Science & Engineering",
     duration: "2022 – 2025",
     location: "Aurangabad, Bihar, India",
+    location: "CGPA: 7.23",
     img: "/images/education/gems-polytechnic.png",
   },
 ];
@@ -151,3 +152,4 @@ export default function Education() {
   );
 
 }
+
