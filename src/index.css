@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   GLOBAL SETTINGS
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #04060f;
+  overflow-x: hidden;
+  font-feature-settings: "ss01", "ss02";
+}
+
+/* ========================================
+   SMOOTH PAGE LOAD
+======================================== */
+
+body {
+  animation: pageFade 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes pageFade {
+  to { opacity: 1; }
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04060f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00f0ff, #b829dd);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #00d0ff, #9f2bd4);
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background: #00f0ff;
+  color: black;
+}
+
+/* ========================================
+   ANIMATED MESH BACKGROUND
+======================================== */
+
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(circle at 20% 30%, rgba(0,255,255,0.15), transparent 40%),
+              radial-gradient(circle at 80% 70%, rgba(184,41,221,0.15), transparent 40%);
+  filter: blur(100px);
+  animation: meshMove 20s infinite alternate ease-in-out;
+}
+
+@keyframes meshMove {
+  0% { transform: translate(0px, 0px); }
+  100% { transform: translate(-40px, 40px); }
+}
+
+/* ========================================
+   CYBER GRID
+======================================== */
+
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(0,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.15) 1px, transparent 1px);
+  background-size: 70px 70px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* ========================================
+   GLASS UTILITIES
+======================================== */
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========================================
+   NEON UTILITIES
+======================================== */
+
+.neon-border {
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.neon-glow-hover:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* ========================================
+   PARTICLES
+======================================== */
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00f0ff;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: particleFloat 18s infinite ease-in-out;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-40px) translateX(15px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* ========================================
+   CURSOR GLOW
+======================================== */
+
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,255,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* ========================================
+   PARALLAX DEPTH
+======================================== */
+
+.parallax {
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.3s ease-out;
+}
